@@ -1,3 +1,4 @@
+const moment = require('moment');
 module.exports = {
     title: 'Utopia',
     base:'/myblog/',
@@ -47,5 +48,19 @@ module.exports = {
           ]
         }
       ],
-    }
+      lastUpdated: '最后更新', // string | boolean
+    },
+    plugins: [
+      [
+        '@vuepress/last-updated',
+        {
+          transformer: (timestamp, lang) => {
+            // 不要忘了安装 moment
+            const moment = require('moment')
+            moment.locale('zh-cn')
+            return moment(timestamp).format('lll')
+          }
+        }
+      ]
+    ]
   }
