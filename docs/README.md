@@ -1,1 +1,3 @@
-# Vuepress
+---
+home: true;
+---
