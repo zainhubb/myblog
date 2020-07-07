@@ -4,8 +4,15 @@ module.exports = {
     base:'/myblog/',
     description: '随便玩玩',
     head: [
-      ['link', { rel: 'icon',href: '/assets/favicon/favicon.ico' }],
-      ['meta',{name: 'author',content:'zain'}]
+      ['link', { rel: 'icon',href: '/assets/favicon/ico.png' }],
+      ['meta',{name: 'author',content:'zain'}],
+      // ['link', { rel: 'manifest', href: '/manifest.json' }],
+      // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+      // ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+      // ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+      // ['link', { rel: 'apple-touch-icon', href: '/assets/favicon/ico.png' }],
+      // ['meta', { name: 'msapplication-TileImage', content: '/assets/favicon/ico.png' }],
+      // ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     themeConfig: {
       nav:[
@@ -51,16 +58,28 @@ module.exports = {
       lastUpdated: '最后更新', // string | boolean
     },
     plugins: [
-      [
-        '@vuepress/last-updated',
-        {
-          transformer: (timestamp, lang) => {
-            // 不要忘了安装 moment
-            const moment = require('moment')
-            moment.locale('zh-cn')
-            return moment(timestamp).format('lll')
+        [
+          '@vuepress/last-updated',
+          {
+            transformer: (timestamp, lang) => {
+              // 不要忘了安装 moment
+              const moment = require('moment')
+              moment.locale('zh-cn')
+              return moment(timestamp).format('lll')
+            }
           }
-        }
-      ]
+        ], 
+        //PWA插件未启用
+        // [ 
+        //   '@vuepress/pwa',
+        //   {
+        //     serviceWorker: true,
+        //     updatePopup: {
+        //       message: "新东西来了,点一下获取呗!",
+        //       buttonText: "获取"
+        //     }
+        //   }
+        // ]
+        
     ]
   }
