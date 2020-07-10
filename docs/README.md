@@ -1,3 +1,4 @@
 ---
-home: true;
+home: true
 ---
+评论测试

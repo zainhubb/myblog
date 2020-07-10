@@ -57,21 +57,32 @@ module.exports = {
       ],
       lastUpdated: '最后更新', // string | boolean
     },
-    plugins: [
-        [
-          '@vuepress/last-updated',
+    plugins: {
+        
+          '@vuepress/last-updated':
           {
             transformer: (timestamp, lang) => {
               // 不要忘了安装 moment
               const moment = require('moment')
               moment.locale('zh-cn')
-              return moment(timestamp).format('lll')
+              return moment(timestamp).format('LLL')
             }
-          }
-        ], 
+          }, 
+          '@vssue/vuepress-plugin-vssue': {
+            // 设置 `platform` 而不是 `api`
+            platform: 'github-v4',
+      
+            // 其他的 Vssue 配置
+            owner: 'zainhubb',
+            repo: 'myblog',
+            clientId: 'd4bd0e1bdc0b4c4e0985',
+            clientSecret: '6ba8862c487aab21e0026b7132e660535844f78c',
+          },
+          '@vuepress/back-to-top':{}
+        
         //PWA插件未启用
-        // [ 
-        //   '@vuepress/pwa',
+        //  
+        //   '@vuepress/pwa':
         //   {
         //     serviceWorker: true,
         //     updatePopup: {
@@ -79,7 +90,7 @@ module.exports = {
         //       buttonText: "获取"
         //     }
         //   }
-        // ]
+        // 
         
-    ]
+    }
   }
