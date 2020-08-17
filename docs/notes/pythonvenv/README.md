@@ -70,7 +70,8 @@ pip freeze --all > requirements.txt
 这时会在当前目录生成一个`requirements.txt`,里面记录了pip包信息
 
 ### 2.导入
-新建好一个虚拟环境后,将`requirements.txt`复制到该虚拟环境文件夹中
+新建好一个虚拟环境后,将`requirements.txt`复制到该虚拟环境文件夹中  
+
 激活该虚拟环境后,在命令行中进入该虚拟环境文件夹,输入以下命令自动安装所需pip包
 ```
 pip install -r requirements.txt

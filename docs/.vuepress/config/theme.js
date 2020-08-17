@@ -25,16 +25,16 @@ module.exports = {
       text: '个人笔记',
       items: [
         {
-          text: 'vuepress',
-          link: '/notes/vuepress/'
-        },
-        {
           text: 'git',
           link: '/notes/git/'
         },
         {
           text: 'python虚拟环境',
           link: '/notes/pythonvenv/'
+        },
+        {
+          text: 'scrapy',
+          link: '/notes/scrapy/'
         }
       ]
     }

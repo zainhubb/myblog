@@ -14,10 +14,10 @@
 
 <script>
 const msgs = [
-  `There's nothing here.`,
-  `How did we get here?`,
-  `That's a Four-Oh-Four.`,
-  `Looks like we've got some broken links.`
+  `404  404  404  404  404  404  404`,
+  `你来到了没有知识的荒野.`,
+  `这是不存在的页面哦.`,
+  `是不是进错页面了呢?`
 ]
 
 export default {

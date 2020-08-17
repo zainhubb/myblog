@@ -102,19 +102,11 @@ you-get -l <网址URL> #参数"l"代表"playlist",后面跟上网址URL
 
 ## 3.例:B站视频下载
 
-### 3.1获取av号
-
-B站现在对应每个网页使用的是BV号,我们要先获取到AV号才能得到正确的网址URL.
-
-打开想下载的视频,按`F12`,打开开发者工具,在console中输入`aid`,将得到的红色数字复制.
-
-将得到的AV号加在"www.bilibili.com/video/av"后面得到可以下载的网址URL.
-
-例如:"www.bilibili.com/video/av45802902"
 
 ```
-you-get -o ~/you-getDownload --format=dash-flv www.bilibili.com/video/av45802902
+you-get -o ~/you-getDownload --format=dash-flv https://www.bilibili.com/video/BV1Mb411i747
 ```
+
 
 ![下载](../../.vuepress/public/assets/img/videodownload/1.png)
 
